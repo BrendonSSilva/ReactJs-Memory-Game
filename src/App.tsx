@@ -20,6 +20,7 @@ const App = () => {
   const [shownCount, setShownCount] = useState<number>(0)
   const [gridItems, setGridItems] = useState<GridItemType[]>([])
 
+  //função resetar e criar uma grid
   useEffect(() => { resetAndCreateGrid() }, [])
 
   useEffect(() => {
