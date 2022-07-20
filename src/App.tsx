@@ -81,16 +81,20 @@ const App = () => {
     //2 - criar grid
     //2.1 - criar um grid vazio
     let tmpGrid: GridItemType[] = []
+    //criar 2x cada item do GridItemType aleatoriamente
     for (let i = 0; i < (items.length * 2); i++) {
       tmpGrid.push({
         item: null, shown: false, permanentShown: false
       })
     }
     //2.2 preencher grid
+    //o for será executado 2x (duas vezes)
     for (let w = 0; w < 2; w++) {
       for (let i = 0; i < items.length; i++) {
         let pos = -1
+        //verificar se a posição está preenchida
         while (pos < 0 || tmpGrid[pos].item !== null) {
+          // uma posição aleatória até o item 2 foi gerada
           pos = Math.floor(Math.random() * (items.length * 2))
         }
         tmpGrid[pos].item = i;
@@ -99,7 +103,6 @@ const App = () => {
 
     //2.3 atualizar o state
     setGridItems(tmpGrid)
-
 
     //3 - iniciar o jogo
     setPlaying(true)

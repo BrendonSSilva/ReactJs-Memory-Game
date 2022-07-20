@@ -1,4 +1,6 @@
+// com o styled components é possível criar funções no css
 import s from 'styled-components'
+
 
 type ContainerProps = {
     showBackground: boolean;
@@ -14,6 +16,7 @@ export const Container = s.div<ContainerProps>`
     cursor: pointer;
 `;
 
+//icons
 type IconProps = {
     opacity?: number;
 }
